@@ -1,0 +1,1 @@
+<div id="{{ $attributes["target"] }}" class="form-text text-danger">{{ $errors->first($attributes["target"]) }}</div>
