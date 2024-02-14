@@ -28,6 +28,16 @@ services:
     networks:
       - tasker-network
 
+  composer:
+    build:
+      context: ./dockerfiles/composer
+      dockerfile: dockerfile
+    container_name: composer-container
+    volumes:
+      - ./src:/var/composer/src
+    networks:
+      - tasker-network
+
   mysql:
     image: mysql
     container_name: mysql-container
